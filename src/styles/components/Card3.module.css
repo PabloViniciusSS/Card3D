@@ -1,0 +1,116 @@
+.container_card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #D9CDF7;
+    border-radius: 9.60297px;
+    width: 875px;
+    height: 498px;
+    gap: 20px;
+
+}
+.flip_container{
+    width: 449px;
+    height: 222.96px;
+    perspective: 1000px;
+
+}
+.flipper{
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+}
+
+.container_card .flip-container.flipper .front{
+	position:absolute;
+    transform:  rotateY(0deg);
+	backface-visibility:hidden;
+	transition: transform .4s linear;	
+}
+
+.container_card .flip-container.flipper .back{
+    position:absolute;
+	transform: rotateY(180deg);
+	backface-visibility:hidden;
+	transition: transform .4s linear;	
+}
+
+
+.container_card .flip-container.flipper .front:hover .front{
+    transform:  rotateY(-180deg);
+	cursor:pointer;	
+}
+.container_card .flip-container.flipper .front:hover .back{
+    transform:  rotateY(0deg);
+	cursor:pointer;
+}
+
+
+
+.container_card .container_description{
+    width: auto;
+    height: auto;
+
+
+    
+}
+.container_card .container_description h1{
+    width: 100%;
+    height: auto;
+    
+    font-style: normal;
+    font-weight: 600;
+    color: #271A45;  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+.container_card .container_description p:nth-child(1){
+    width: 75px;
+    height: 10px;
+    font-style: normal;
+    opacity: 0.67;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 100%;
+    color: #271A45;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.container_card .container_description p:nth-child(2){
+    width: 65px;
+    height: 16px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #271A45;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.container_card .container_description button{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        font-size: 12px;
+        background-color: transparent;
+        color: #271A45;
+        width: 148px;
+        height: 32px;
+        border: 0.5px solid #271A45;
+        border-radius: 999px;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    
+}
+
