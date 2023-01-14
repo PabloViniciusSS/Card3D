@@ -1,30 +1,31 @@
 import React, { useState } from 'react'
 import styles from '../styles/components/Card3.module.css'
+import { Md360 } from "react-icons/md";
+import { GrClose } from "react-icons/gr";
 
 export const Card3D = (props) => {
 
-    const [btnState, setBtnState] = useState(false)
+    const [imageState, setImage] = useState(false)
 
     function handleClick(){
-        setBtnState(btnState => !btnState)
+        setImage(!imageState)
     }
 
 
-    let toggleClassCheck = btnState ? {props.img}}
 
 
   return (
     <div className={styles.container_card} >
         
-        <div className={styles.flip_container}> 
-            <div className={styles.flipper}>
-                <div className={styles.front}>
-                <img src={props.img}/>
-                </div>
-                <div className={styles.back}>
-                    <img src={props.img2} />
-                </div>
+        <div className={styles.container_img}> 
+            <div className={styles.icon}>
+            {!imageState ? <Md360 className={styles.rotation} 
+            onClick={handleClick => setImage(!imageState)}
+            /> :  <GrClose className={styles.fechar}  onClick={() => setImage(!imageState)} />}
             </div>
+                <div className={styles.img}>
+                {!imageState ? <img src={props.img} /> : <img src={props.img2} />}
+                </div>
         </div>
 
 

@@ -9,43 +9,29 @@
     gap: 20px;
 
 }
-.flip_container{
+.container_img{
     width: 449px;
     height: 222.96px;
     perspective: 1000px;
 
 }
-.flipper{
-	width: 100%;
-	height: 100%;
-	transform-style: preserve-3d;
+.icon{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: normal;
+    align-content: normal;
+    font-size: 24px;
 }
 
-.container_card .flip-container.flipper .front{
-	position:absolute;
-    transform:  rotateY(0deg);
-	backface-visibility:hidden;
-	transition: transform .4s linear;	
+.rotation{
+    cursor: pointer;
 }
 
-.container_card .flip-container.flipper .back{
-    position:absolute;
-	transform: rotateY(180deg);
-	backface-visibility:hidden;
-	transition: transform .4s linear;	
+.fechar{
+        cursor: pointer;
 }
-
-
-.container_card .flip-container.flipper .front:hover .front{
-    transform:  rotateY(-180deg);
-	cursor:pointer;	
-}
-.container_card .flip-container.flipper .front:hover .back{
-    transform:  rotateY(0deg);
-	cursor:pointer;
-}
-
-
 
 .container_card .container_description{
     width: auto;
